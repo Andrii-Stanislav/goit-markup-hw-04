@@ -127,6 +127,10 @@ margin-right: 85px;
 .current {
   color: var(--accent-color);  
 }
+/* 
+.header-address {
+  display: flex;
+} */
 
 .header-contacts-link:not(:last-child) {
   margin-right: 30px;
@@ -143,12 +147,32 @@ margin-right: 85px;
   color: var(--primery-text-color); 
 }
 
+.header-contacts-link:first-child::before {
+  display: inline-block;
+  text-align: center;
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/header-contacts/mail.svg);
+}
+
+.header-contacts-link:last-child::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  background-image: url(../images/header-contacts/tell.svg);
+}
+
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
   cursor: pointer;
-
 }
+
+
 /*
  Main Studio Content 
  */
