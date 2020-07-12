@@ -158,17 +158,17 @@ margin-right: 85px;
  */
 
 /* Hero Content */
-.hero-section {
+.hero-section{
 padding-top: 200px;
 padding-bottom: 200px;
 height: 600px;
 
 text-align: center;
-background-image: rgb(0, 0, 0, 0.8), url(../images/Hero/Hero.jpg);
+
+background-image: url(../images/Hero/overlay.svg), url(../images/Hero/Hero.jpg);
 background-position: center, center;
 background-size: cover, cover;
 }
-
 
 .hero-title {
 margin-top: 0px;
@@ -226,6 +226,41 @@ background-color: var(--accent-color);
 
 .features-list-item {
   width: 270px;
+}
+
+.features-list-item::before {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #F5F4FA;
+}
+
+.features-list-item:nth-child(1)::before {
+  background-image: url(../images/features/antenna.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.features-list-item:nth-child(2)::before {
+  background-image: url(../images/features/clock.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.features-list-item:nth-child(3)::before {
+  background-image: url(../images/features/diagram.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.features-list-item:nth-child(4)::before {
+  background-image: url(../images/features/astronaut.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .features-list-item:not(:last-child) {
@@ -288,6 +323,34 @@ color: var(--secondary-text-color);
   background-color: grey;
   /* Временно. Чтобы было видно белый текст */
   width: 370px;
+}
+
+.activities-list-item::before {
+  content: "";
+  display: block;
+  width: 370px;
+  height: 294px;
+}
+
+.activities-list-item:nth-child(1)::before {
+  background-image: url(../images/whot-we-do/desktop-app.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.activities-list-item:nth-child(2)::before {
+  background-image: url(../images/whot-we-do/mobile-app.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.activities-list-item:nth-child(3)::before {
+  background-image: url(../images/whot-we-do/design.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .activities-list-item:not(:last-child) {
@@ -409,17 +472,20 @@ color: var(--secondary-text-color);
   color: var(--secondary-text-color);
 }
 
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+  }
+
 .clients-list-link {
   /* Временно */
   display: block;
   width: 170px;
   height: 90px;
-  background-color: aqua;
-  /* Временно */
-}
 
-.clients-list-item:not(:last-child) {
-margin-right: 30px;
+  border-style: solid ;
+  border-width: 1px;
+  border-color: #AFB1B8;
+  border-radius: 4px;
 }
 
 .clients-list-link:focus,
