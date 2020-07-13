@@ -147,6 +147,7 @@ margin-right: 85px;
   color: var(--primery-text-color); 
 }
 
+
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
@@ -493,6 +494,8 @@ color: var(--secondary-text-color);
   color: var(--accent-color);
 }
 
+
+
 /* Footer */
 
 .footer {
@@ -506,13 +509,12 @@ color: var(--secondary-text-color);
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px; 
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-contacts {
-  margin-top: 60px;
-  margin-bottom: 60px;
   margin-right: 69px;
-  width: 231px;
 }
 
 .footer-logo {
@@ -542,8 +544,10 @@ margin-bottom: 9px;
 }
 
 .join-section {
-  margin-top: 72px;
-  margin-bottom: 100px;
+  /* margin-top: 72px;
+  margin-bottom: 100px; */
+  padding-top: 12px;
+  padding-bottom: 40px;
   margin-right: 90px;
   width: 206px;
 }
@@ -582,8 +586,10 @@ margin-bottom: 9px;
 } 
 
 .subscribe-container {
-  margin-top: 72px;
-  margin-bottom: 94px;
+  /* margin-top: 72px;
+  margin-bottom: 94px; */
+  padding-top: 12px;
+  padding-bottom: 34px;
   width: 570px;
 }
 
@@ -619,6 +625,9 @@ margin-bottom: 9px;
   background-image: url(../images/footer/subscribe.svg);
   margin-left: 10px;
 }
+
+
+
 
 /*
 Portfolio
