@@ -147,11 +147,30 @@ margin-right: 85px;
   color: var(--primery-text-color); 
 }
 
+.header-icon {
+  margin-right: 10px; 
+  fill: var(--primery-text-color);
+}
+
+.header-icon.mail {
+  width: 16px; 
+  height: 12px;
+}
+
+.header-icon.phone {
+  width: 11px; 
+  height: 15px;
+}
 
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
   cursor: pointer;
+}
+
+.header-contacts-link:hover .header-icon,
+.header-contacts-link:focus .header-icon {
+fill: var(--accent-color);
 }
 
 /*
@@ -162,6 +181,7 @@ margin-right: 85px;
 .hero-section{
 padding-top: 200px;
 padding-bottom: 200px;
+max-width: 1600px;
 height: 600px;
 
 text-align: center;
@@ -325,7 +345,7 @@ color: var(--secondary-text-color);
   /* Временно. Чтобы было видно белый текст */
   width: 370px;
 }
-
+ 
 .activities-list-item::before {
   content: "";
   display: block;
@@ -334,21 +354,21 @@ color: var(--secondary-text-color);
 }
 
 .activities-list-item:nth-child(1)::before {
-  background-image: url(../images/whot-we-do/desktop-app.png);
+  background-image: url(../images/whot-we-do/desktop-app.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .activities-list-item:nth-child(2)::before {
-  background-image: url(../images/whot-we-do/mobile-app.png);
+  background-image: url(../images/whot-we-do/mobile-app.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .activities-list-item:nth-child(3)::before {
-  background-image: url(../images/whot-we-do/design.png);
+  background-image: url(../images/whot-we-do/design.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -391,6 +411,8 @@ color: var(--secondary-text-color);
 
 .team-list-item {
   width: 270px;
+  padding-bottom: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .team-list-item:not(:last-child) {
@@ -437,17 +459,31 @@ color: var(--secondary-text-color);
 }
 
 .team-social-link {
-  /* Временно */
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: aqua;
-  /* Временно */
+  border-radius: 50%;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px; 
+}
+
+.social-icon.team-link {
+  fill: #AFB1B8;
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.team-social-link:focus .social-icon,
+.team-social-link:hover .social-icon {
+fill: var(--darkbackground-text-color) ;
 }
 
 /* Clients Content */
@@ -479,21 +515,61 @@ color: var(--secondary-text-color);
 
 .clients-list-link {
   /* Временно */
-  display: block;
+  display: flex;
   width: 170px;
   height: 90px;
+  align-items: center;
+  justify-content: center;
 
   border-style: solid ;
   border-width: 1px;
   border-color: #AFB1B8;
-  border-radius: 4px;
+  border-radius: 5px;
+}
+
+.clients-icon {
+  fill: #AFB1B8;  
+}
+
+.clients-icon.first-logo {
+  width: 45px;
+  height: 50px;
+}
+
+.clients-icon.second-logo {
+  width: 40px;
+  height: 52px;
+}
+
+.clients-icon.third-logo {
+  width: 41px;
+  height: 43px;
+}
+
+.clients-icon.fourth-logo {
+  width: 80px;
+  height: 42px;
+}
+
+.clients-icon.fifth-logo {
+  width: 59px;
+  height: 47px;
+}
+
+.clients-icon.sixth-logo {
+  width: 89px;
+  height: 46px;
 }
 
 .clients-list-link:focus,
 .clients-list-link:hover{
-  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
+.clients-list-link:focus .clients-icon,
+.clients-list-link:hover .clients-icon{
+  fill: var(--accent-color);
+}
 
 
 /* Footer */
@@ -569,11 +645,17 @@ margin-bottom: 9px;
 
 .join-list-link {
   /* Временно */
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: aqua;
-  /* Временно */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.social-icon.footer-link {
+  fill: var(--darkbackground-text-color);
 }
 
 .join-list-item:not(:last-child) {
@@ -582,8 +664,9 @@ margin-bottom: 9px;
 
 .join-list-link:hover, 
 .join-list-link:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 } 
+
 
 .subscribe-container {
   /* margin-top: 72px;
@@ -658,7 +741,6 @@ Main Section
   padding-top: 6px;
   padding-right: 22px;
   padding-left: 22px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0px;
   border-radius: 4px;
 
@@ -679,13 +761,9 @@ Main Section
 .portfolio-btn:hover {
   color: var(--darkbackground-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.portfolio-list-link:focus,
-.portfolio-list-link:hover {
-  background-color: var(--accent-color);
-  /* Временно */
-}
 
 .portfolio-list {
   display: flex;
@@ -702,11 +780,16 @@ margin-right: 30px;
 
 .portfolio-list-link {
   display: block;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px #EEEEEE;
+  border: 1px solid #EEEEEE;
   width: 370px;
   padding-bottom: 20px;
 }
+
+.portfolio-list-link:focus,
+.portfolio-list-link:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 
 .portfolio-list-link img {
   margin-bottom: 20px;
