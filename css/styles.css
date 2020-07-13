@@ -60,9 +60,7 @@ color: inherit;
 
 /* Header */
 
-.header {
-  border-bottom: 1px solid #ECECEC;
-}
+
 
 .header .container {
   width: 1200px;
@@ -183,10 +181,15 @@ padding-top: 200px;
 padding-bottom: 200px;
 max-width: 1600px;
 height: 600px;
+margin-left: auto;
+margin-right: auto;
 
 text-align: center;
 
-background-image: url(../images/Hero/overlay.svg), url(../images/Hero/Hero.jpg);
+background-image: linear-gradient(
+  rgba(47, 48, 58, 0.8),
+  rgba(47, 48, 58, 0.8)
+  ), url(../images/hero/hero.jpg);
 background-position: center, center;
 background-size: cover, cover;
 }
@@ -720,6 +723,7 @@ Main Section
 .portfolio-section {
   padding-top: 94px;
   padding-bottom: 94px;
+  border-top: 1px solid #ECECEC;
 }
 
 .portfolio-section .container {
