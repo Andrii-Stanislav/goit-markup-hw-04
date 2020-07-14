@@ -252,38 +252,19 @@ background-color: var(--accent-color);
   width: 270px;
 }
 
-.features-list-item::before {
-  content: "";
-  display: block;
-  width: 270px;
+.features-svg-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   margin-bottom: 30px;
 
   background-color: #F5F4FA;
 }
 
-.features-list-item:nth-child(1)::before {
-  background-image: url(../images/features/antenna.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.features-list-item:nth-child(2)::before {
-  background-image: url(../images/features/clock.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.features-list-item:nth-child(3)::before {
-  background-image: url(../images/features/diagram.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.features-list-item:nth-child(4)::before {
-  background-image: url(../images/features/astronaut.svg);
-  background-position: center;
+.features-svg {
+  width: 70px;
+  height: 70px;
   background-repeat: no-repeat;
 }
 
@@ -704,11 +685,9 @@ margin-bottom: 9px;
   background-color: var(--accent-color);
 }
 
-.footer-btn::after {
-  content: "";
+.button-sub {
   width: 24px;
   height: 24px;
-  background-image: url(../images/footer/subscribe.svg);
   margin-left: 10px;
 }
 
@@ -719,7 +698,7 @@ margin-bottom: 9px;
 Portfolio
 Main Section
 */
-
+ 
 .portfolio-section {
   padding-top: 94px;
   padding-bottom: 94px;
